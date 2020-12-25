@@ -1,0 +1,13 @@
+[gd_scene format=2]
+
+[node name="Main" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackgroundColor" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.184314, 0.203922, 0.247059, 1 )
