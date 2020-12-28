@@ -39,6 +39,7 @@ var JourneyInfo =[
 # INTEFACE VARS
 var Col1:String = "242a3a"
 var Col2:String = "2f343f"
+var Col3:String = "363e55"
 
 var journey_info = []
 
@@ -61,6 +62,8 @@ func assign_color_theme():
 		node.modulate = Color(Col1)
 	for node in get_tree().get_nodes_in_group("Col2"):
 		node.modulate = Color(Col2)
+	for node in get_tree().get_nodes_in_group("Col3"):
+		node.modulate = Color(Col3)
 
 func _input(event):
 	if event.is_action_pressed("f_fullscreen"):

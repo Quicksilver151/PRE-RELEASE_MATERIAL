@@ -3,6 +3,8 @@ extends MarginContainer
 var time = "09:00"
 var tickets = 480
 
+signal selected(node)
+
 func _ready():
 	$VBoxContainer/JourneyName.text = "Journey "+self.name
 
@@ -15,3 +17,7 @@ func _process(delta):
 		$Button.disabled = true
 	
 	
+
+
+func _on_Button_pressed():
+	emit_signal("selected",self)
