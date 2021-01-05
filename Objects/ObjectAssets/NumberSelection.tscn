@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Icons/minus.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Icons/plus.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/Fonts/Number.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Objects/ObjectAssets/ObjectAssetsCode/NumberSelection.gd" type="Script" id=5]
+
+[node name="NumberSelection" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 192
+custom_constants/margin_top = 128
+custom_constants/margin_left = 192
+custom_constants/margin_bottom = 128
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBox" type="VBoxContainer" parent="."]
+margin_left = 192.0
+margin_top = 128.0
+margin_right = 832.0
+margin_bottom = 472.0
+custom_constants/separation = 64
+
+[node name="Label" type="RichTextLabel" parent="VBox"]
+margin_right = 640.0
+margin_bottom = 41.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center]Select Number of Tickets"
+text = "Select Number of Tickets"
+fit_content_height = true
+
+[node name="HBox1" type="HBoxContainer" parent="VBox"]
+margin_top = 105.0
+margin_right = 640.0
+margin_bottom = 192.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Minus" type="TextureButton" parent="VBox/HBox1"]
+margin_right = 210.0
+margin_bottom = 87.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 1 )
+expand = true
+stretch_mode = 5
+
+[node name="NumberDisplay" type="Label" parent="VBox/HBox1"]
+margin_left = 214.0
+margin_right = 425.0
+margin_bottom = 87.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 4 )
+text = "128"
+align = 1
+valign = 1
+
+[node name="Plus" type="TextureButton" parent="VBox/HBox1"]
+margin_left = 429.0
+margin_right = 640.0
+margin_bottom = 87.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="HBox2" type="HBoxContainer" parent="VBox"]
+margin_top = 256.0
+margin_right = 640.0
+margin_bottom = 344.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cancel" type="Button" parent="VBox/HBox2"]
+margin_right = 210.0
+margin_bottom = 88.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+enabled_focus_mode = 0
+text = "Cancel"
+flat = true
+
+[node name="Blank" type="Control" parent="VBox/HBox2"]
+margin_left = 214.0
+margin_right = 425.0
+margin_bottom = 88.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Confirm" type="Button" parent="VBox/HBox2"]
+margin_left = 429.0
+margin_right = 640.0
+margin_bottom = 88.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.278431, 1, 0, 1 )
+enabled_focus_mode = 0
+text = "Confirm"
+flat = true
+[connection signal="pressed" from="VBox/HBox1/Minus" to="." method="_on_Minus_pressed"]
+[connection signal="pressed" from="VBox/HBox1/Plus" to="." method="_on_Plus_pressed"]
+[connection signal="pressed" from="VBox/HBox2/Cancel" to="." method="_on_Cancel_pressed"]
+[connection signal="pressed" from="VBox/HBox2/Confirm" to="." method="_on_Confirm_pressed"]

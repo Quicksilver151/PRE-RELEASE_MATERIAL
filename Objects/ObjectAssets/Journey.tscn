@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/StyleBoxes/SoftRoundEdged.tres" type="StyleBox" id=2]
 [ext_resource path="res://Objects/ObjectAssets/ObjectAssetsCode/Journey.gd" type="Script" id=3]
 
-[sub_resource type="StyleBoxEmpty" id=6]
+[sub_resource type="StyleBoxEmpty" id=1]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 1, 1, 0.121569 )
@@ -15,7 +15,7 @@ corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 corner_detail = 16
 
-[sub_resource type="StyleBoxEmpty" id=7]
+[sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.121569, 0.121569, 0.121569, 0.521569 )
@@ -128,9 +128,9 @@ text = "Tickets: 480"
 [node name="Button" type="Button" parent="."]
 margin_right = 256.0
 margin_bottom = 256.0
-custom_styles/hover = SubResource( 6 )
+custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 7 )
+custom_styles/focus = SubResource( 3 )
 custom_styles/disabled = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 toggle_mode = true
